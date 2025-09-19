@@ -92,7 +92,7 @@ const Hero = () => {
                 {/* AnimatePresence wrapping background image */}
                 <AnimatePresence mode="wait">
                     <motion.img
-                        key={slide.id + "-bg"}
+                        key={slide.id}
                         src={slide.heroImg}
                         alt=""
                         initial={{ opacity: 0 }}
