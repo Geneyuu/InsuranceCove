@@ -57,7 +57,7 @@ const Hero = () => {
                 <img
                     src={overlayImage}
                     alt="Overlay"
-                    className="absolute inset-0 object-cover h-full w-[45vw] z-10 md:opacity-[0.0.5] opacity-[0.03]"
+                    className="absolute inset-0 object-cover h-full w-[45vw] z-10 md:opacity-[0.04] opacity-[0.04]"
                 />
 
                 <img
