@@ -6,23 +6,23 @@ const TopBar = () => {
     return (
         // Motion container
         <motion.div
-            className="bg-customNavy text-white"
+            className="bg-customNavy border-b-[0.5px] border-white/5 text-white"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div className="max-w-5xl mx-auto flex items-center justify-between py-2 px-4 lg:px-0">
+            <div className="hidden max-w-6xl mx-auto md:flex items-center justify-between py-2 px-4 lg:px-0">
                 {/* Left side - Email & Phone */}
                 <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-8">
                     <div className="flex items-center gap-2">
                         <MdEmail className="text-small" color="#015FC9" />
-                        <span className="text-small font-medium">
+                        <span className="text-small font-light">
                             info@insurancecove.com
                         </span>
                     </div>
                     <div className="flex items-center gap-2">
                         <MdPhone className="text-small" color="#015FC9" />
-                        <span className="text-small font-medium">
+                        <span className="text-small font-light">
                             +63 912 345 6789
                         </span>
                     </div>
