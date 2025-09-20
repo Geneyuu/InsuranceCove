@@ -6,7 +6,7 @@ const TopBar = () => {
     return (
         // Motion container
         <motion.div
-            className="bg-customNavy border-b-[0.5px] border-white/5 text-white"
+            className="bg-yellow-500 border-b-[0.5px] border-white/5 text-gray-800"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -15,13 +15,13 @@ const TopBar = () => {
                 {/* Left side - Email & Phone */}
                 <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-8">
                     <div className="flex items-center gap-2">
-                        <MdEmail className="text-small" color="#015FC9" />
+                        <MdEmail className="text-small" color="#1f2937" />
                         <span className="text-small font-light">
                             info@insurancecove.com
                         </span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <MdPhone className="text-small" color="#015FC9" />
+                        <MdPhone className="text-small" color="#1f2937" />
                         <span className="text-small font-light">
                             +63 912 345 6789
                         </span>
@@ -34,13 +34,13 @@ const TopBar = () => {
                     <div className="flex flex-row sm:flex-row gap-2 sm:gap-3">
                         <a
                             href="#faq"
-                            className="text-small hover:text-[#015FC9] transition"
+                            className="text-small hover:text-[#1f2937] transition"
                         >
                             FAQ
                         </a>
                         <a
                             href="#about"
-                            className="text-small hover:text-[#015FC9] transition"
+                            className="text-small hover:text-[#1f2937] transition"
                         >
                             About
                         </a>

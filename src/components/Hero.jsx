@@ -9,6 +9,7 @@ import awardImage from "../assets/award.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { MdArrowRightAlt } from "react-icons/md";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const slides = [
     {
@@ -50,7 +51,12 @@ const Hero = () => {
     const slide = slides[currentSlide];
 
     return (
-        <div className="relative h-[55vh] md:h-[73vh] ">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="relative h-[55vh] md:h-[76vh]"
+        >
             <div className="absolute inset-0 bg-gradient-to-r  from-custonDarkNavy/100 via-customNavy/90 md:bg-gradient-to-r md:from-customNavy/100 md:via-customNavy/80 lg:from-custonDarkNavy/100 lg:via-customNavy/100 z-10 md:max-w-[95%]"></div>
 
             <div className="max-w-6xl mx-auto">
@@ -68,10 +74,9 @@ const Hero = () => {
                 <img
                     src={dotsImage}
                     alt="Shape"
-                    className="absolute -bottom-32 -left-52 h-[50vh] z-30  animate-pulse-slow"
+                    className="absolute -bottom-32 -left-52 h-[50vh] z-30 animate-pulse-slow"
                 />
 
-                {/* AnimatePresence wrapping content */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={slide.id}
@@ -81,9 +86,9 @@ const Hero = () => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-start relative z-10"
                     >
-                        <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-40 text-white text-center md:text-left">
+                        <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-52 text-white text-center md:text-left">
                             {slide.title}{" "}
-                            <span className="text-yellow-500 font-medium">
+                            <span className="text-yellow-500 font-bold">
                                 {slide.highlight}
                             </span>
                         </h1>
@@ -100,7 +105,6 @@ const Hero = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* AnimatePresence wrapping background image */}
                 <AnimatePresence mode="wait">
                     <motion.img
                         key={slide.id}
@@ -110,11 +114,10 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="absolute top-0 right-0 w-full h-full object-cover -z-0 md:w-auto filter grayscale-[10%]"
+                        className="absolute top-0 right-0 w-full h-full object-cover md:w-auto"
                     />
                 </AnimatePresence>
 
-                {/* Arrow Navigation */}
                 <div className="absolute top-1/2 left-1 right-1 md:left-10 md:right-10 flex justify-between px-4 md:px-0 z-30">
                     <button
                         onClick={() =>
@@ -123,9 +126,9 @@ const Hero = () => {
                                     (prev - 1 + slides.length) % slides.length
                             )
                         }
-                        className="text-yellow-500 text-3xl md:text-3xl bg-transparent border rounded-full p-1 rotate-180"
+                        className="text-yellow-500 text-3xl md:text-3xl bg-transparent border rounded-full p-1 "
                     >
-                        <MdArrowRightAlt />
+                        <IoIosArrowBack />
                     </button>
                     <button
                         onClick={() =>
@@ -135,11 +138,11 @@ const Hero = () => {
                         }
                         className="text-yellow-500 text-3xl md:text-3xl bg-transparent/5 border rounded-full p-1 "
                     >
-                        <MdArrowRightAlt />
+                        <IoIosArrowForward />
                     </button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

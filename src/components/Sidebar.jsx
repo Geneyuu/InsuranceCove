@@ -6,7 +6,7 @@ import {
     FaLinkedinIn,
     FaBehance,
 } from "react-icons/fa";
-import logo from "../assets/LOGO 2.png";
+import logoLandScape from "../assets/logolandscape.png";
 
 const Sidebar = ({ menuInfo, setMenuInfo }) => {
     return (
@@ -14,7 +14,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
             {/* Overlay */}
             {menuInfo && (
                 <div
-                    className="fixed inset-0 bg-yellow-500/5 z-40"
+                    className="fixed inset-0 bg-gray-950/50 z-40"
                     onClick={() => setMenuInfo(false)}
                 ></div>
             )}
@@ -25,18 +25,22 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
                 ${menuInfo ? "translate-x-0" : "translate-x-full"}`}
             >
                 {/* Top Logo & Close */}
-                <div className="flex items-center justify-between bg-yellow-500/90 px-6 py-4">
-                    <img src={logo} alt="Logo" className="h-20 md:h-[86px]" />
+                <div className="flex items-center justify-between bg-custonDarkNavy px-10 py-12">
+                    <img
+                        src={logoLandScape}
+                        alt="Logo"
+                        className="h-12 md:h-[60px]"
+                    />
                     <IoClose
-                        className="text-4xl md:text-3xl cursor-pointer text-white"
+                        className="text-2xl md:text-3xl cursor-pointer text-white"
                         onClick={() => setMenuInfo(false)}
                     />
                 </div>
 
                 {/* Content */}
-                <div className="p-4 ml-6 md:p-6 text-gray-300 space-y-10 md:space-y-20">
+                <div className="p-4 ml-6 md:p-6 text-gray-300 space-y-20 md:space-y-20">
                     {/* About */}
-                    <p className="leading-relaxed mt-8 md:mt-12">
+                    <p className="leading-relaxed mt-3 md:mt-3">
                         Arrived compass prepare an on as. Reasonable particular
                         on my it in sympathize. Size now easy eat hand how.
                         Unwilling he departure elsewhere dejection at. Heart
@@ -44,7 +48,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
                     </p>
 
                     {/* Contact Info */}
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                         <div>
                             <h3 className="font-semibold text-white">
                                 ADDRESS
@@ -74,7 +78,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
                                 placeholder="Enter your e-mail"
                                 className="flex-1 px-4 py-2 md:py-4 outline-none bg-transparent border border-white/30"
                             />
-                            <button className="px-4 bg-blue-500 hover:bg-blue-500/90 text-white flex items-center justify-center">
+                            <button className="px-4 bg-yellow-500 hover:bg-blue-500/90 text-white flex items-center justify-center">
                                 <LuArrowUpRight className="text-xl" />
                             </button>
                         </div>

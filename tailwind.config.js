@@ -19,7 +19,7 @@ export default {
                 xl: "1280px", // desktops
                 "2xl": "1536px", // large screens
                 "4k": "2560px", // ultra-wide / 4K monitors
-                custom: "860px", // ✅ bagong breakpoint
+                custom: "1100px", // ✅ bagong breakpoint
             },
             fontSize: {
                 h1: [
