@@ -86,7 +86,7 @@ const Hero = () => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-start relative z-10"
                     >
-                        <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-52 text-white text-center md:text-left">
+                        <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-32 md:mt-52 text-white text-center md:text-left">
                             {slide.title}{" "}
                             <span className="text-yellow-500 font-bold">
                                 {slide.highlight}
