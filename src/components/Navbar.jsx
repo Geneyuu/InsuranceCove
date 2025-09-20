@@ -19,14 +19,14 @@ const Navbar = () => {
         <>
             {/* Navbar */}
             <div className="bg-custonDarkNavy drop-shadow-lg justify-between">
-                <div className="max-w-6xl mx-auto flex items-center justify-between py-2 px-4 md:px-4 lg:px-0">
+                <div className="max-w-6xl mx-auto flex items-center justify-between py-2 md:px-4 px-4">
                     {/* Logo */}
                     <div className="flex flex-1">
                         <img src={logo} alt="Logo" className="h-[65px]" />
                     </div>
 
-                    {/* Right side (links) */}
-                    <div className=" md:flex items-center gap-8 mr-4 text-white bg-customNavy pl-6 rounded-md border border-white/5">
+                    {/* Right side (links) - hidden kapag <860px */}
+                    <div className="hidden custom:flex items-center gap-8 mr-4 text-white bg-customNavy pl-6 rounded-md border border-white/5">
                         {navLinks.map((link) => (
                             <a
                                 key={link.id}
@@ -66,7 +66,7 @@ const Navbar = () => {
                             </span>
                         </div>
 
-                        {/* Menu Icon */}
+                        {/* Menu Icon - visible lang kapag <860px */}
                         <div
                             className="text-2xl md:text-3xl cursor-pointer"
                             onClick={() => setMenuInfo(true)}

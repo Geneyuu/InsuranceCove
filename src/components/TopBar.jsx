@@ -11,7 +11,7 @@ const TopBar = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div className="hidden max-w-6xl mx-auto md:flex items-center justify-between py-2 px-4 lg:px-0">
+            <div className="hidden max-w-6xl mx-auto md:flex items-center justify-between py-2 px-4 md:px-4">
                 {/* Left side - Email & Phone */}
                 <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-8">
                     <div className="flex items-center gap-2">
