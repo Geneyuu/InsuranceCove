@@ -14,7 +14,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
             {/* Overlay */}
             {menuInfo && (
                 <div
-                    className="fixed inset-0 bg-yellow-500/10 z-40"
+                    className="fixed inset-0 bg-yellow-500/5 z-40"
                     onClick={() => setMenuInfo(false)}
                 ></div>
             )}
