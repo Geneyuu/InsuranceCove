@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
@@ -34,7 +35,7 @@ export default {
                     "clamp(1.5rem, 0.8rem + 2vw, 2rem)", // 24px → 32px
                     { lineHeight: "1.3", fontWeight: "600" },
                 ],
-                h4: [
+                h4: [-
                     "clamp(1.25rem, 0.7rem + 1.5vw, 1.75rem)", // 20px → 28px
                     { lineHeight: "1.4", fontWeight: "600" },
                 ],
@@ -69,5 +70,18 @@ export default {
             "pulse-slow": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ addUtilities }) {
+            addUtilities({
+                ".clip-slant": {
+                    "clip-path": "polygon(80px 0, 100% 0, 100% 100%, 0 100%)",
+                },
+                // "@media (min-width: 768px)": {
+                //     ".md\\:clip-slant": {
+                //         "clip-path": "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
+                //     },
+                // },
+            });
+        }),
+    ],
 };

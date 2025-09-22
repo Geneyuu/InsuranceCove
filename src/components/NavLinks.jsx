@@ -31,7 +31,7 @@ const NavLinks = () => {
                     delay={0}
                     className={`capitalize text-md font-medium px-4 cursor-pointer transition ${
                         active === link.href
-                            ? "text-[#FCD213]"
+                            ? "text-[#FCD213] font-extrabold"
                             : "text-gray-300 hover:text-[#FCD213]"
                     }`}
                     activeClass="text-yellow-500"
@@ -51,6 +51,8 @@ const NavLinks = () => {
             >
                 Get a Quote
             </Link>
+
+            
         </div>
     );
 };

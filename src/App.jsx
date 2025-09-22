@@ -2,11 +2,11 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
 import BackToTop from "./components/BackToTop";
+import Appointment from "./components/Appointment";
 
 const App = () => {
     return (
         <div className="bg-customNavy min-h-screen text-white">
-            <TopBar />
             <Navbar />
             <section id="home">
                 <Hero />
@@ -35,6 +35,8 @@ const App = () => {
 
             {/* Back to top button */}
             <BackToTop />
+            
+        <Appointment />
         </div>
     );
 };
