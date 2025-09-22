@@ -74,7 +74,7 @@ export default {
         plugin(function ({ addUtilities }) {
             addUtilities({
                 ".clip-slant": {
-                    "clip-path": "polygon(80px 0, 100% 0, 100% 100%, 0 100%)",
+                    "clip-path": "polygon(100px 0, 100% 0, 100% 100%, 0 100%)",
                 },
                 ".clip-slant-2": {
                     "clip-path": "circle(101.5% at 84% 84%)",

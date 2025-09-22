@@ -9,7 +9,7 @@ import SidebarMenu from "./SidebarMenu"; // Left sidebar (navigation links)
 import NavLinks from "./NavLinks";
 
 const NavbarContent = ({ onMenuNav, onMenuInfo }) => (
-    <div className="max-w-6xl mx-auto flex items-center justify-between py-3 md:px-12 lg:px-12 xl:px-0 px-4">
+    <div className="max-w-6xl mx-auto flex items-center justify-between py-6 md:px-12 lg:px-12 xl:px-0 px-4">
         {/* Left Menu Icon (mobile + md) */}
         <div
             className="flex md:flex lg:hidden text-2xl cursor-pointer"

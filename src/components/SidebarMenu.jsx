@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-scroll";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { MdLocationOn, MdAccessTime } from "react-icons/md";
 
 const navLinks = [
     { id: 1, name: "Home", href: "home" },
@@ -39,8 +40,8 @@ const SidebarMenu = ({ menuNav, setMenuNav }) => {
                         smooth={true}
                         duration={500}
                         offset={-80}
-                        spy={true} // ← important for dynamic active
-                        onSetActive={(to) => setActive(to)} // ← updates active state
+                        spy={true}
+                        onSetActive={(to) => setActive(to)}
                         className={`cursor-pointer text-small hover:text-[#e9bf02] hover:underline hover:underline-offset-[20px] ${
                             active === link.href
                                 ? "text-[#ffd000] font-bold underline underline-offset-[15px]"
@@ -66,11 +67,26 @@ const SidebarMenu = ({ menuNav, setMenuNav }) => {
             </Link>
 
             {/* Footer */}
-            <div className="mt-auto mb-8 pt-6 border-t border-white/20 flex flex-col gap-3">
+            <div className="mt-auto mb-8 gap-6 pt-6 border-t border-white/20 flex flex-col ">
+                {/* Address & Opening Hours */}
+                <div className="flex flex-col gap-2 text-white text-sm">
+                    <div className="flex items-center gap-2">
+                        <MdLocationOn className="text-base text-[#e9bf02]" />
+                        <span>California, TX 70240E</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <MdAccessTime className="text-base text-[#e9bf02]" />
+                        <span>Opening Hours: 10:00am - 07:00pm</span>
+                    </div>
+                </div>
+
+                {/* Copyright */}
                 <p className="text-white text-sm">
                     &copy; {new Date().getFullYear()} Insurance-Cove
                 </p>
-                <div className="flex gap-4 text-white text-lg">
+
+                {/* Social Icons */}
+                <div className="flex gap-5 text-white text-lg">
                     <a
                         href="https://facebook.com"
                         target="_blank"

@@ -1,49 +1,57 @@
-import { MdEmail, MdPhone } from "react-icons/md";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaYoutube,
+    FaLinkedinIn,
+} from "react-icons/fa";
+import { MdLocationOn, MdAccessTime, MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { FaInstagram, FaTiktok } from "react-icons/fa6";
 
 const TopBar = () => {
     return (
-        // Motion container
         <motion.div
-            className="bg-[#eec306] border-b-[0.5px] border-white/5 text-gray-800 "
+            className="bg-[#0C91D5] text-white text-sm"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div className="hidden max-w-6xl mx-auto md:flex items-center justify-between py-2 md:px-12 lg:px-12 xl:px-4 px-4">
-                {/* Left side - Email & Phone */}
-                <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-8">
+            <div className="flex w-full">
+                {/* Left Side (75%) */}
+                <div className="w-[70%] flex items-center gap-6 px-6 py-2 text-gray-100">
                     <div className="flex items-center gap-2">
-                        <MdEmail className="text-small" color="#1f2937" />
-                        <span className="text-small font-light">
-                            info@insurancecove.com
-                        </span>
+                        <MdLocationOn className="text-base" />
+                        <span>California, TX 70240E</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <MdAccessTime className="text-base" />
+                        <span>Opening Hours: 10:00am - 07:00pm</span>
                     </div>
                 </div>
 
-                {/* Right side - Links & Socials */}
-                <div className="flex flex-col items-center gap-2 md:flex-row md:items-center md:gap-8">
-                    {/* Links */}
-                    <div className="flex flex-row sm:flex-row gap-2 sm:gap-3">
+                {/* Right Side (30%) */}
+                <div className="w-[30%] md:w-[60%] lg:w-[60%] xl:w-[30%] bg-[#ffd000] flex items-center justify-end gap-6 px-6 py-4 clip-slant text-[#171827] text-md">
+                    {/* Email */}
+                    <div className="flex items-center gap-2">
+                        <MdEmail className="text-lg" />
                         <a
-                            href="#faq"
-                            className="text-small hover:text-[#1f2937] transition"
+                            href="mailto:info@example.com"
+                            className="hover:underline"
                         >
-                            FAQ
+                            info@example.com
                         </a>
                     </div>
 
-                    {/* Socials */}
-                    <div className="flex gap-4 mt-2 sm:mt-0">
-                        <a href="#" className="hover:text-blue-600 transition">
-                            <FaFacebookF className="text-small" />
+                    {/* Social Icons */}
+                    <div className="flex items-center gap-5">
+                        <a href="#" className="hover:text-blue-500">
+                            <FaFacebookF />
                         </a>
-                        <a href="#" className="hover:text-pink-500 transition">
-                            <FaInstagram className="text-small" />
+                        <a href="#" className="hover:text-black">
+                            <FaTiktok />
                         </a>
-                        <a href="#" className="hover:text-black transition">
-                            <FaTiktok className="text-small" />
+                        <a href="#" className="hover:text-red-600">
+                            <FaInstagram />
                         </a>
                     </div>
                 </div>

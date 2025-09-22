@@ -18,7 +18,7 @@ const NavLinks = () => {
     }, []);
 
     return (
-        <div className="hidden custom:flex items-center gap-1 text-white mx-auto rounded-lg border border-white/20">
+        <div className="hidden custom:flex items-center  text-white mx-auto rounded-l-none rounded-r-lg">
             {navLinks.map((link) => (
                 <Link
                     key={link.id}
@@ -31,7 +31,7 @@ const NavLinks = () => {
                     className={`relative capitalize text-md font-medium px-4 cursor-pointer transition-all
                         ${
                             active === link.href
-                                ? "text-[#ffd000] font-extrabold underline underline-offset-[18px]"
+                                ? "text-[#e9bf02] font-extrabold underline underline-offset-[18px]"
                                 : "text-gray-300 hover:text-[#e9bf02] hover:underline hover:underline-offset-[18px]"
                         }`}
                     onSetActive={(to) => setActive(to)}
@@ -45,9 +45,9 @@ const NavLinks = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="bg-[#0C91D5] px-5 py-3 rounded-r-md text-white font-light text-[15px] hover:bg-white hover:text-black cursor-pointer transition"
+                className="bg-[#0C91D5] px-5 py-2 rounded-md text-white font-light text-[15px] hover:bg-white hover:text-black cursor-pointer transition ml-10"
             >
-                Book a Call
+                Get a Quote
             </Link>
         </div>
     );
