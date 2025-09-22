@@ -45,9 +45,9 @@ const NavLinks = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="bg-[#0C91D5] px-5 py-2 rounded-md text-white font-light text-[15px] hover:bg-white hover:text-black cursor-pointer transition ml-10"
+                className="bg-[#0C91D5] px-5 py-2 rounded-md text-white font-light text-[15px] hover:bg-[#e9bf02] hover:text-black cursor-pointer transition ml-5"
             >
-                Get a Quote
+                Book a Consultation
             </Link>
         </div>
     );

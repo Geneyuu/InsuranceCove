@@ -7,28 +7,25 @@ import Appointment from "./components/Appointment";
 
 const App = () => {
     useEffect(() => {
-        window.Tawk_API = window.Tawk_API || {};
-        window.Tawk_LoadStart = new Date();
+        (function () {
+            var Tawk_API = Tawk_API || {};
+            Tawk_API.onLoad = function () {
+                // I-adjust position (e.g., 80px from bottom)
+                Tawk_API.customStyle = {
+                    zIndex: 999999,
+                    bottom: "100px",
+                    right: "50px",
+                };
+            };
 
-        const s1 = document.createElement("script");
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/68c7edece72aad1923de0611/1j56fip4d";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-
-        const s0 = document.getElementsByTagName("script")[0];
-        s0.parentNode.insertBefore(s1, s0);
-
-        // hintayin mag-load bago i-adjust
-        window.Tawk_API.onLoad = function () {
-            const iframe = document.querySelector(
-                'iframe[title="chat widget"]'
-            );
-            if (iframe) {
-                iframe.style.bottom = "80px";
-                iframe.style.right = "20px";
-            }
-        };
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = "https://embed.tawk.to/68c7edece72aad1923de0611/1j56fip4d";
+            s1.charset = "UTF-8";
+            s1.setAttribute("crossorigin", "*");
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     }, []);
 
     return (
