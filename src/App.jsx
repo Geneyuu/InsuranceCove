@@ -10,7 +10,10 @@ const App = () => {
             <div className="hidden md:block">
                 <TopBar />
             </div>
-            <Navbar />
+            <div className="border-b-[2px] border-yellow-300">
+                <Navbar />
+            </div>
+
             <section id="home">
                 <Hero />
             </section>
