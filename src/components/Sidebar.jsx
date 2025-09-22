@@ -2,8 +2,10 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { IoClose } from "react-icons/io5";
 import { LuArrowUpRight } from "react-icons/lu";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaBehance } from "react-icons/fa";
+
 import logoLandScape from "../assets/logolandscape.png";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+
 
 const Sidebar = ({ menuInfo, setMenuInfo }) => {
   const formRef = useRef();
@@ -137,21 +139,18 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
             </form>
           </div>
 
-          {/* Socials */}
-          <div className="flex space-x-4 pt-2">
-            <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
-              <FaTwitter />
-            </a>
-            <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
-              <FaLinkedinIn />
-            </a>
-            <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
-              <FaBehance />
-            </a>
-          </div>
+        {/* Socials */}
+<div className="flex space-x-4 pt-2">
+  <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
+    <FaFacebookF />
+  </a>
+  <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
+    <FaInstagram />
+  </a>
+  <a href="#" className="p-2 rounded-full border border-gray-600 hover:bg-gray-700">
+    <FaTiktok />
+  </a>
+</div>
         </div>
       </div>
     </>
