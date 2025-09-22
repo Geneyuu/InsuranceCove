@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { IoClose } from "react-icons/io5";
 import { LuArrowUpRight } from "react-icons/lu";
 
-import logoLandScape from "../assets/logolandscape.png";
+import logoLandScape from "../assets/logo-final.png";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Sidebar = ({ menuInfo, setMenuInfo }) => {
@@ -72,12 +72,12 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 
             {/* Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-[350px] md:w-[480px] bg-custonDarkNavy shadow-lg z-50 transform transition-transform duration-300 ${
+                className={`fixed top-0 right-0 h-full w-[350px] md:w-[450px] bg-[#171827] shadow-lg z-50 transform transition-transform duration-300 ${
                     menuInfo ? "translate-x-0" : "translate-x-full"
                 }`}
             >
                 {/* Top Logo & Close */}
-                <div className="flex items-center justify-between bg-custonDarkNavy px-10 py-12">
+                <div className="flex items-center justify-between bg-[#171827] px-4 py-12">
                     <img
                         src={logoLandScape}
                         alt="Logo"
@@ -127,27 +127,33 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
                             onSubmit={sendEmail}
                             className="flex flex-col gap-2"
                         >
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Enter Your Name"
-                                required
-                                className="px-4 py-4 outline-none bg-transparent border border-white/30 rounded"
-                            />
-                            <input
-                                type="email"
-                                name="user_email"
-                                placeholder="Enter your e-mail"
-                                required
-                                className="px-4 py-4 outline-none bg-transparent border border-white/30 rounded"
-                            />
+                            {/* Container para sa inputs side by side */}
+                            <div className="flex gap-2">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    required
+                                    maxLength={20} // maximum characters
+                                    className="px-4 py-4 outline-none bg-transparent border border-white/15 text-small w-36"
+                                />
+
+                                <input
+                                    type="email"
+                                    name="user_email"
+                                    placeholder="Enter Your E-mail"
+                                    required
+                                    className="w-full px-4  py-4 outline-none bg-transparent border border-white/15 text-small"
+                                />
+                            </div>
+
                             <button
                                 type="submit"
                                 disabled={isSending}
                                 className={`px-4 py-4 flex items-center justify-center rounded text-white ${
                                     isSending
                                         ? "bg-gray-500 cursor-not-allowed"
-                                        : "bg-yellow-500 hover:bg-blue-500/90"
+                                        : "bg-yellow-500 hover:bg-[#0C91D5]"
                                 }`}
                             >
                                 <LuArrowUpRight className="text-xl" />

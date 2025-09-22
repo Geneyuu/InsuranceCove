@@ -35,8 +35,8 @@ export default {
                     "clamp(1.5rem, 0.8rem + 2vw, 2rem)", // 24px → 32px
                     { lineHeight: "1.3", fontWeight: "600" },
                 ],
-                h4: [-
-                    "clamp(1.25rem, 0.7rem + 1.5vw, 1.75rem)", // 20px → 28px
+                h4: [
+                    -"clamp(1.25rem, 0.7rem + 1.5vw, 1.75rem)", // 20px → 28px
                     { lineHeight: "1.4", fontWeight: "600" },
                 ],
                 h5: [
@@ -76,11 +76,9 @@ export default {
                 ".clip-slant": {
                     "clip-path": "polygon(80px 0, 100% 0, 100% 100%, 0 100%)",
                 },
-                // "@media (min-width: 768px)": {
-                //     ".md\\:clip-slant": {
-                //         "clip-path": "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
-                //     },
-                // },
+                ".clip-slant-2": {
+                    "clip-path": "circle(101.5% at 84% 84%)",
+                },
             });
         }),
     ],

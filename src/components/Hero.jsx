@@ -57,7 +57,14 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="relative h-[55vh] md:h-[76vh]"
         >
-            <div className="absolute inset-0 bg-gradient-to-r  from-custonDarkNavy/100 via-customNavy/90 md:bg-gradient-to-r md:from-customNavy/100 md:via-customNavy/80 lg:from-custonDarkNavy/100 lg:via-customNavy/100 z-10 md:max-w-[95%]"></div>
+            <div
+                className="absolute inset-0 bg-gradient-to-r  
+  from-[#2a2b3d]/100 
+  via-[#1f2235]/90 
+  md:bg-gradient-to-r md:from-[#1f2235]/100 md:via-[#2a2b3d]/80 
+  lg:from-[#171827]/100 lg:via-[#1f2235]/100 
+  z-10 md:max-w-[95%]"
+            ></div>
 
             <div className="max-w-6xl mx-auto">
                 <img
@@ -86,17 +93,17 @@ const Hero = () => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-start relative z-10"
                     >
-                        <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-32 md:mt-52 text-white text-center md:text-left">
+                        <h1 className="text-5xl md:px-12 lg:px-12 xl:px-4 px-4 md:text-7xl  md:max-w-3xl font-medium tracking-tighter mt-32 md:mt-52 text-white text-center md:text-left">
                             {slide.title}{" "}
-                            <span className="text-[#FCD213] font-bold">
+                            <span className="text-[#ffd000] font-bold">
                                 {slide.highlight}
                             </span>
                         </h1>
-                        <p className="mt-4 px-4 text-sm md:px-4 md:max-w-xl lg:px-0 md:text-lg text-gray-400 font-medium text-center md:text-left">
+                        <p className="mt-4  text-sm md:px-12 lg:px-12 xl:px-4 px-4 md:max-w-xl  md:text-lg text-gray-400 font-medium text-center md:text-left">
                             {slide.description}
                         </p>
                         <motion.button
-                            className="mt-8 mx-auto md:mx-4 lg:mx-0 bg-blue-600 px-6 py-3 text-sm md:text-lg font-extrabold cursor-pointer hover:bg-yellow-500 transition-colors duration-300 text-white tracking-tighter"
+                            className="mt-8 mx-auto md:mx-12 lg:mx-12 xl:mx-4 bg-[#0C91D5] px-6 py-3 text-sm md:text-lg font-extrabold cursor-pointer hover:bg-[#0D97DC] transition-colors duration-300 text-white tracking-tight"
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 500 }}
                         >
