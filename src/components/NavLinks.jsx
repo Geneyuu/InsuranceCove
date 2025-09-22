@@ -31,8 +31,8 @@ const NavLinks = () => {
                     delay={0}
                     className={`capitalize text-md font-medium px-4 cursor-pointer transition ${
                         active === link.href
-                            ? "text-yellow-500"
-                            : "text-gray-300 hover:text-yellow-500"
+                            ? "text-[#FCD213]"
+                            : "text-gray-300 hover:text-[#FCD213]"
                     }`}
                     activeClass="text-yellow-500"
                     onSetActive={(to) => setActive(to)} // update active habang nag-scroll
@@ -47,7 +47,7 @@ const NavLinks = () => {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="bg-yellow-500 px-5 py-3 rounded-r-md text-customNavy font-light tracking-tighter text-[15px] hover:bg-blue-600 hover:text-white cursor-pointer transition"
+                className="bg-[#FCD213] px-5 py-3 rounded-r-md text-customNavy font-light tracking-tighter text-[15px] hover:bg-blue-600 hover:text-white cursor-pointer transition"
             >
                 Get a Quote
             </Link>

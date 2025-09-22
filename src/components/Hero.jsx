@@ -88,7 +88,7 @@ const Hero = () => {
                     >
                         <h1 className="text-5xl px-4 md:px-4 md:text-7xl lg:px-0 md:max-w-3xl font-medium tracking-tighter mt-32 md:mt-52 text-white text-center md:text-left">
                             {slide.title}{" "}
-                            <span className="text-yellow-500 font-bold">
+                            <span className="text-[#FCD213] font-bold">
                                 {slide.highlight}
                             </span>
                         </h1>
