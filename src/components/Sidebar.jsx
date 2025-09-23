@@ -108,7 +108,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 						</div>
 						<div>
 							<h3 className="font-semibold text-white">EMAIL</h3>
-							<p>support@validtheme.com</p>
+							<p>info@insurance-cove.com</p>
 						</div>
 						<div>
 							<h3 className="font-semibold text-white">
