@@ -56,7 +56,7 @@ const Hero = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="relative h-[55vh] md:h-[85vh]"
+			className="relative h-[55vh] md:h-[100vh]"
 		>
 			<div
 				className="absolute inset-0 bg-gradient-to-r  
@@ -82,8 +82,8 @@ const Hero = () => {
 				<motion.img
 					src={imageWave}
 					alt="Shape"
-					className="absolute top-0 -left-32 md:left-0 h-full z-10 object-contain filter brightness-75"
-					animate={{ x: [0, -30, 0] }}
+					className="absolute top-0 -left-32 md:-left-52 lg:-left-32 h-full z-10 object-contain filter brightness-75"
+					animate={{ x: [0, -35, 0] }}
 					transition={{
 						duration: 4,
 						repeat: Infinity,

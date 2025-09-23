@@ -25,15 +25,21 @@ const NavLinks = () => {
 					to={link.href}
 					spy={true}
 					smooth={true}
-					offset={-50}
+					offset={
+						link.href === "about"
+							? 0
+							: link.href === "home"
+							? -200
+							: 0
+					}
 					duration={0}
 					delay={0}
-					className={`relative capitalize text-md font-medium px-4 cursor-pointer transition-all
-                        ${
-							active === link.href
-								? "text-[#e9bf02] font-extrabold underline underline-offset-[18px]"
-								: "text-gray-300 hover:text-[#e9bf02] hover:underline hover:underline-offset-[18px]"
-						}`}
+					className={`relative capitalize text-lg font-medium px-3 cursor-pointer transition-all
+      ${
+			active === link.href
+				? "text-[#e9bf02] font-extrabold underline underline-offset-[18px]"
+				: "text-gray-300 hover:text-[#e9bf02] hover:underline hover:underline-offset-[18px]"
+		}`}
 					onSetActive={(to) => setActive(to)}
 				>
 					{link.name}
@@ -45,7 +51,7 @@ const NavLinks = () => {
 				smooth={true}
 				offset={-80}
 				duration={500}
-				className="bg-[#0C91D5] px-5 py-2 rounded-md text-white font-light text-[15px] hover:bg-[#e9bf02] hover:text-black cursor-pointer transition ml-5"
+				className="bg-[#0070eb] px-5 py-2 rounded-md text-white font-light text-[15px] hover:bg-[#e9bf02] hover:text-black cursor-pointer transition ml-6"
 			>
 				Book a Consultation
 			</Link>
