@@ -114,7 +114,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 							<h3 className="font-semibold text-white">
 								CONTACT
 							</h3>
-							<p>+44-20-7328-4499</p>
+							<p>+1 925 208 0569</p>
 						</div>
 					</div>
 
