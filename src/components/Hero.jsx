@@ -3,7 +3,6 @@ import heroImage from "../assets/hero-bg.webp";
 import heroImage2 from "../assets/hero-sample-2.webp";
 import heroImage3 from "../assets/hero-sample.webp";
 import overlayImage from "../assets/hero-bg-waves.webp";
-import shapeImage from "../assets/main-slider-shape-1-2.png";
 import dotsImage from "../assets/dots.png";
 import imageWave from "../assets/main-slider-shape.png";
 import awardImage from "../assets/award.svg";
@@ -56,7 +55,7 @@ const Hero = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="relative h-[55vh] md:h-[100vh]"
+			className="relative h-[55vh] md:h-[100vh] bg-[#171827]"
 		>
 			<div
 				className="absolute inset-0 bg-gradient-to-r  
@@ -74,18 +73,13 @@ const Hero = () => {
 					className="absolute inset-0 object-cover h-full w-[45vw] z-10 md:opacity-[0.04] opacity-[0.04]"
 				/> */}
 
-				<img
-					src={shapeImage}
-					alt="Shape"
-					className="absolute top-14 right-24 w-50 h-15 md:w-28 md:h-30 animate-spin-slow z-20"
-				/>
 				<motion.img
 					src={imageWave}
 					alt="Shape"
-					className="absolute top-0 -left-32 md:-left-52 lg:-left-32 h-full z-10 object-contain filter brightness-75"
+					className="absolute top-0 -left-32 md:-left-52 lg:-left-32 h-full z-10 object-contain filter brightness-75 pointer-events-none"
 					animate={{ x: [0, -35, 0] }}
 					transition={{
-						duration: 4,
+						duration: 2.5,
 						repeat: Infinity,
 						repeatType: "loop",
 						ease: "easeInOut",
@@ -98,7 +92,7 @@ const Hero = () => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						transition={{ duration: 0.8 }}
+						transition={{ duration: 1.5 }}
 						className="flex flex-col items-start relative z-10"
 					>
 						<h1 className="text-5xl md:px-12 lg:px-12 xl:px-4 px-4 md:text-7xl  md:max-w-3xl font-medium tracking-tighter mt-32 md:mt-56 text-white text-center md:text-left">

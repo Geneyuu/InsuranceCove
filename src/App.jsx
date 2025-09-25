@@ -5,15 +5,17 @@ import TopBar from "./components/TopBar";
 import BackToTop from "./components/BackToTop";
 import Appointment from "./components/Appointment";
 import About from "./components/About";
-import aboutImage from "./assets/hero-sample-2.webp";
-import aboutImageTop from "./assets/team-one-shape-1.png";
+import aboutImageOverlay from "./assets/image-about-overlay-2.png";
+import shapeImage from "./assets/main-slider-shape-1-2.png";
+
+import { motion } from "framer-motion";
+import Services from "./components/Services";
 
 const App = () => {
 	useEffect(() => {
 		(function () {
 			var Tawk_API = Tawk_API || {};
 			Tawk_API.onLoad = function () {
-				// I-adjust position (e.g., 80px from bottom)
 				Tawk_API.customStyle = {
 					zIndex: 999999,
 					bottom: "100px",
@@ -32,62 +34,69 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="bg-[#171827] min-h-screen text-white">
-			<div className="hidden md:block">
-				<TopBar />
-			</div>
-			<div className="">
-				<Navbar />
-			</div>
+		<div className="min-h-screen text-white ">
+			{/* TopBar (visible only on md and up) */}
+			<TopBar className="hidden md:block" />
 
+			{/* Navbar (always visible) */}
+			<Navbar />
+
+			{/* Hero Section */}
 			<section id="home">
 				<Hero />
 			</section>
+
+			{/* About Section */}
 			<section
 				id="about"
-				className="relative h-screen flex justify-center items-center"
+				className="relative h-screen flex justify-center items-center bg-[#171827] z-0"
 			>
-				{/* Background Layer */}
-				<div className="absolute inset-0">
-					{/* Bottom-right image */}
-					{/* <img
-						src={aboutImage}
-						alt="Background Bottom"
-						className="absolute bottom-0 right-0 w-[70%] h-auto object-contain pointer-events-none z-0"
-					/> */}
+				{/* Background Overlay Image */}
+				<motion.img
+					src={aboutImageOverlay}
+					alt="Background Overlay"
+					className="absolute -bottom-0 right-0 md:right-40 opacity-5 pointer-events-none md:h-[500px]"
+					animate={{ x: [0, -35, 0] }}
+					transition={{
+						duration: 2,
+						repeat: Infinity,
+						ease: "easeInOut",
+					}}
+				/>
+				<img
+					src={shapeImage}
+					alt="Shape"
+					className="absolute top-40 right-24 w-50 h-15 md:w-28 md:h-30 animate-spin-slow pointer-events-none "
+				/>
 
-					{/* Top-right image */}
-					<img
-						src={aboutImageTop}
-						alt="Background Top"
-						className="absolute md:top-0 bottom-24 right-0 w-[60%] md:w-[35%] h-auto object-contain pointer-events-none z-20 opacity-15 grayscale"
-					/>
+				{/* <img
+					src={aboutWaveOverlay}
+					alt="Background Overlay"
+					className="absolute md:bottom-24 md:left-0 opacity-30 pointer-events-none md:h-[400px] filter-yellow"
+				/> */}
 
-					{/* Overlay */}
-					<div className="absolute inset-0 bg-[#171827] bg-opacity-[0.98]" />
-				</div>
-
-				{/* Foreground Content */}
-				<div className="relative z-10">
-					<About />
-				</div>
+				<About />
 			</section>
 
-			<section
-				id="services"
-				className="h-screen flex items-center justify-center bg-red-200"
-			>
-				<h1>Services Section</h1>
+			{/* Services Section */}
+			<section id="services" className="md:py-44 py-10 bg-[#131420]">
+				<Services />
 			</section>
+
+			{/* Contact Section */}
 			<section
 				id="contact"
-				className="h-screen flex items-center justify-center"
+				className="h-screen flex items-center justify-center bg-blue-200"
 			>
-				<h1>Contact Section</h1>
+				<h1 className="text-black text-2xl md:text-4xl">
+					Contact Section
+				</h1>
 			</section>
 
-			{/* Back to top button */}
+			{/* Back to Top Button */}
 			<BackToTop />
+
+			{/* Appointment (probably floating or fixed?) */}
 			<Appointment />
 		</div>
 	);
