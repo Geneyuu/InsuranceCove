@@ -117,7 +117,7 @@ const Services = () => {
 						</div>
 
 						{/* Icon above overlay */}
-						<div className="absolute top-[155px]  sm:top-[170px] left-5 bg-[#131420] p-3 rounded-full ">
+						<div className="absolute top-[155px]  sm:top-[170px] left-5 bg-[#131420] p-3 rounded-full z-10 ">
 							{getIconByTitle(product.title)}
 						</div>
 
