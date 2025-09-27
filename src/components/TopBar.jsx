@@ -16,16 +16,19 @@ const TopBar = () => {
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
 		>
-			<div className="flex w-full">
+			<div className="hidden md:flex w-full">
 				{/* Left Side  */}
 				<div className="w-[70%] xl:w-[45%] flex items-center gap-6 px-6 py-2 text-gray-100">
 					<div className="flex items-center gap-2">
 						<MdLocationOn className="text-base" />
-						<span>California, TX 70240E</span>
+						<span>
+							303 Twin Dolphin Drive, Unit # 6008, Redwood City,
+							CA - 94002
+						</span>
 					</div>
 					<div className="flex items-center gap-2">
 						<MdAccessTime className="text-base" />
-						<span>Opening Hours: 10:00am - 07:00pm</span>
+						<span>Opening Hours: 2:pm - 08:00pm</span>
 					</div>
 				</div>
 
@@ -38,7 +41,7 @@ const TopBar = () => {
 							href="mailto:info@example.com"
 							className="hover:underline"
 						>
-							info@example.com
+							info@insurance-cove.com
 						</a>
 					</div>
 

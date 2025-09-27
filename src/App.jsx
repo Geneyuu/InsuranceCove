@@ -15,18 +15,12 @@ const App = () => {
 	useEffect(() => {
 		(function () {
 			var Tawk_API = Tawk_API || {};
-			Tawk_API.onLoad = function () {
-				Tawk_API.customStyle = {
-					zIndex: 999999,
-					bottom: "100px",
-					right: "50px",
-				};
-			};
+			var Tawk_LoadStart = new Date();
 
-			var s1 = document.createElement("script"),
-				s0 = document.getElementsByTagName("script")[0];
+			var s1 = document.createElement("script");
+			var s0 = document.getElementsByTagName("script")[0];
 			s1.async = true;
-			s1.src = "https://embed.tawk.to/68c7edece72aad1923de0611/1j56fip4d";
+			s1.src = "https://embed.tawk.to/68d7fdab5d0bdc194bdb073c/1j65rdpv9";
 			s1.charset = "UTF-8";
 			s1.setAttribute("crossorigin", "*");
 			s0.parentNode.insertBefore(s1, s0);
@@ -34,7 +28,7 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="min-h-screen text-white ">
+		<div className="min-h-screen text-white bg-[#171827] ">
 			{/* TopBar (visible only on md and up) */}
 			<TopBar className="hidden md:block" />
 
@@ -49,7 +43,7 @@ const App = () => {
 			{/* About Section */}
 			<section
 				id="about"
-				className="relative h-screen flex justify-center items-center bg-[#171827] z-0"
+				className="relative h-screen flex justify-center items-center bg-[#171827] z-0 my-20 md:my-0"
 			>
 				{/* Background Overlay Image */}
 				<motion.img
@@ -68,13 +62,6 @@ const App = () => {
 					alt="Shape"
 					className="absolute top-40 right-24 w-50 h-15 md:w-28 md:h-30 animate-spin-slow pointer-events-none "
 				/>
-
-				{/* <img
-					src={aboutWaveOverlay}
-					alt="Background Overlay"
-					className="absolute md:bottom-24 md:left-0 opacity-30 pointer-events-none md:h-[400px] filter-yellow"
-				/> */}
-
 				<About />
 			</section>
 

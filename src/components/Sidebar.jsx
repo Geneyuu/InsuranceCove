@@ -3,13 +3,13 @@ import emailjs from "@emailjs/browser";
 import { IoClose } from "react-icons/io5";
 import { LuArrowUpRight } from "react-icons/lu";
 
-import logoLandScape from "../assets/logo-final.png";
+import officialLogo from "../assets/officialLogo.png";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Sidebar = ({ menuInfo, setMenuInfo }) => {
 	const formRef = useRef();
 	const [statusMessage, setStatusMessage] = useState("");
-	const [statusType, setStatusType] = useState(""); // "success" or "error"
+	const [statusType, setStatusType] = useState("");
 	const [isSending, setIsSending] = useState(false);
 
 	const sendEmail = async (e) => {
@@ -79,7 +79,7 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 				{/* Top Logo & Close */}
 				<div className="flex items-center justify-between bg-[#171827] px-4 py-12">
 					<img
-						src={logoLandScape}
+						src={officialLogo}
 						alt="Logo"
 						className="h-12 md:h-[60px]"
 					/>
@@ -104,18 +104,21 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 							<h3 className="font-semibold text-white">
 								ADDRESS
 							</h3>
-							<p>California, TX 70240</p>
+							<p>
+								303 Twin Dolphin Drive, Unit # 6008, Redwood
+								City, CA - 94002
+							</p>
 						</div>
 						<div>
 							<h3 className="font-semibold text-white">EMAIL</h3>
 							<p>info@insurance-cove.com</p>
 						</div>
-						<div>
+						{/* <div>
 							<h3 className="font-semibold text-white">
 								CONTACT
 							</h3>
 							<p>+1 925 208 0569</p>
-						</div>
+						</div> */}
 					</div>
 
 					{/* Subscribe Form */}

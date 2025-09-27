@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoLandScape from "../assets/logo-final.png";
+import officialLogo from "../assets/officialLogo.png";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { CgMenuRight } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -9,7 +9,7 @@ import SidebarMenu from "./SidebarMenu"; // Left sidebar (navigation links)
 import NavLinks from "./NavLinks";
 
 const NavbarContent = ({ onMenuNav, onMenuInfo }) => (
-	<div className="max-w-6xl mx-auto flex items-center justify-between py-6 md:px-12 lg:px-12 xl:px-0 px-4 ">
+	<div className="max-w-6xl mx-auto flex items-center justify-evenly py-6 md:px-12 lg:px-12 xl:px-0 px-4">
 		{/* Left Menu Icon (mobile + md) */}
 		<div
 			className="flex md:flex lg:hidden text-2xl cursor-pointer"
@@ -21,7 +21,7 @@ const NavbarContent = ({ onMenuNav, onMenuInfo }) => (
 		{/* Logo */}
 		<div className="flex-1 flex justify-center md:justify-center lg:justify-start">
 			<img
-				src={logoLandScape}
+				src={officialLogo}
 				alt="Logo"
 				className="h-[55px] md:h-[65px]"
 			/>
@@ -33,19 +33,7 @@ const NavbarContent = ({ onMenuNav, onMenuInfo }) => (
 		</div>
 
 		{/* Right side (desktop only) */}
-		<div className="hidden md:flex lg:flex flex-row items-center gap-5 lg:ml-10">
-			<div className="flex flex-row items-center gap-5">
-				<div className="border border-[#0C91D5] p-2 rounded-full cursor-pointer transition-colors duration-300 text-xs md:text-2xl">
-					<FaPhoneFlip color="#0C91D5" className="hover:text-white" />
-				</div>
-				<div className="flex flex-col text-xs md:text-sm">
-					<p>+92(003) 68-090</p>
-					<span className="text-white/40 font-light tracking-tight">
-						Call to our Experts
-					</span>
-				</div>
-			</div>
-
+		<div className="hidden md:flex lg:flex flex-row items-center lg:ml-10">
 			{/* Right Sidebar Icon */}
 			<div
 				className="text-2xl md:text-3xl cursor-pointer border-l-2 border-white/30 pl-2 h-8 flex items-center"

@@ -5,7 +5,6 @@ import abstractImage from "../assets/abstract-dots.png";
 import { motion } from "framer-motion";
 import { BiSolidDownArrow } from "react-icons/bi";
 import { MdVerified } from "react-icons/md";
-import { FaHandshakeSimple } from "react-icons/fa6";
 
 // Animation for content text
 const textVariants = {
@@ -80,11 +79,19 @@ const About = () => {
 				<h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight max-w-lg md:mx-w-xl">
 					We provide the best insurance policy
 				</h1>
-				<p className="text-[#ffd000] font-extralight mt-6 md:mt-10 text-sm md:text-lg max-w-lg">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Possimus nobis distinctio maxime iusto numquam
-					exercitationem voluptates amet eos quo veritatis.
+				<p className="text-[#ffd000] font-extralight mt-6 md:mt-10 text-sm md:text-[16px] max-w-lg">
+					Insurance Cove was founded with one mission:
 				</p>
+				<p className="text-[#ffd000] font-extralight text-sm md:text-[16px] max-w-lg">
+					to make insurance simple, reliable, and accessible for
+					everyone.
+				</p>
+				<span className="mt-5 text-gray-400">
+					With 30 years of experience guiding people toward the right
+					protection, we serve as a safe harbor for your health,
+					family, and assets—anchoring security and peace of mind when
+					it matters most.
+				</span>
 
 				{/* Tabs */}
 				<div className="flex gap-4 mt-8 flex-wrap justify-center md:justify-start">
@@ -142,15 +149,17 @@ const About = () => {
 							<div className="flex items-start gap-3">
 								<MdVerified className="text-blue-500 text-[20px] mt-[2px] shrink-0" />
 								<p>
-									Our mission is to provide affordable and
-									reliable insurance solutions.
+									Our mission is simple: to protect what
+									matters most — your loved ones.
 								</p>
 							</div>
 							<div className="flex items-start gap-3">
 								<MdVerified className="text-blue-500 text-[20px] mt-[2px] shrink-0" />
 								<p>
-									We aim to serve our clients with
-									transparency and dedication.
+									We do this by offering trusted life
+									insurance solutions and benefits that ensure
+									comfort and security in life’s most
+									uncertain moments.
 								</p>
 							</div>
 						</>
@@ -161,15 +170,18 @@ const About = () => {
 							<div className="flex items-start gap-3">
 								<MdVerified className="text-blue-500 text-[20px] mt-[2px] shrink-0" />
 								<p>
-									Our vision is to become the most trusted
-									insurance provider.
+									To be the most trusted partner in life
+									insurance — protecting families with
+									integrity, compassion, and dependable
+									solutions.
 								</p>
 							</div>
 							<div className="flex items-start gap-3">
 								<MdVerified className="text-blue-500 text-[20px] mt-[2px] shrink-0" />
 								<p>
-									We envision a future where everyone has
-									access to secure insurance.
+									To empower clients to face the future with
+									confidence, knowing they are protected by a
+									partner who truly cares.
 								</p>
 							</div>
 						</>
