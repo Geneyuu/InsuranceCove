@@ -82,7 +82,7 @@ const Navbar = () => {
 					animate={{ y: 0, opacity: 1 }}
 					exit={{ y: -80, opacity: 0 }}
 					transition={{ duration: 0.4 }}
-					className="fixed top-0 left-0 w-full bg-[#171827] drop-shadow-lg z-50 border-b-[2px] border-yellow-300"
+					className="fixed top-0 left-0 w-full bg-[#171827] shadow-2xl z-50"
 				>
 					<NavbarContent
 						onMenuNav={() => setMenuNav(true)}

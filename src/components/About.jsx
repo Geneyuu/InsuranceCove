@@ -1,6 +1,6 @@
 import { useState } from "react";
-import aboutImage from "../assets/about-one-img-1.jpg";
-import aboutImage2 from "../assets/about-one-img-2.jpg";
+import aboutImage from "../assets/about-one-image-1.jpg";
+import aboutImage2 from "../assets/about-one-image-2.jpg";
 import abstractImage from "../assets/abstract-dots.png";
 import { motion } from "framer-motion";
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -51,7 +51,7 @@ const About = () => {
 				<img
 					src={abstractImage}
 					alt="Abstract"
-					className="absolute top-10 opacity-85 -z-20 hidden xl:flex -left-5 rounded-3xl"
+					className="absolute top-10 opacity-85 -z-20 hidden xl:flex -left-5 rounded-3xl object-contain"
 				/>
 				<img
 					src={aboutImage}
@@ -61,7 +61,7 @@ const About = () => {
 				<img
 					src={aboutImage2}
 					alt="Overlay"
-					className="absolute -bottom-32 lg:-right-12 rounded-3xl hidden xl:flex"
+					className="absolute -bottom-32 lg:-left-24 rounded-2xl hidden xl:flex"
 				/>
 			</motion.div>
 

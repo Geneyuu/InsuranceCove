@@ -7,9 +7,11 @@ import Appointment from "./components/Appointment";
 import About from "./components/About";
 import aboutImageOverlay from "./assets/image-about-overlay-2.png";
 import shapeImage from "./assets/main-slider-shape-1-2.png";
+import contactBackground from "./assets/get-insurance-bg.png";
 
 import { motion } from "framer-motion";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 const App = () => {
 	useEffect(() => {
@@ -29,23 +31,18 @@ const App = () => {
 
 	return (
 		<div className="min-h-screen text-white bg-[#171827] ">
-			{/* TopBar (visible only on md and up) */}
 			<TopBar className="hidden md:block" />
 
-			{/* Navbar (always visible) */}
 			<Navbar />
 
-			{/* Hero Section */}
 			<section id="home">
 				<Hero />
 			</section>
 
-			{/* About Section */}
 			<section
 				id="about"
 				className="relative h-screen flex justify-center items-center bg-[#171827] z-0 my-20 md:my-0"
 			>
-				{/* Background Overlay Image */}
 				<motion.img
 					src={aboutImageOverlay}
 					alt="Background Overlay"
@@ -65,25 +62,26 @@ const App = () => {
 				<About />
 			</section>
 
-			{/* Services Section */}
 			<section id="services" className="md:py-44 py-10 bg-[#131420]">
 				<Services />
 			</section>
 
-			{/* Contact Section */}
 			<section
 				id="contact"
-				className="h-screen flex items-center justify-center bg-blue-200"
+				className="relative h-auto md:h-screen bg-[#171827]"
 			>
-				<h1 className="text-black text-2xl md:text-4xl">
-					Contact Section
-				</h1>
+				<div className="absolute inset-0 bg-[#222339] pointer-events-none bg-opacity-0">
+					<img
+						src={contactBackground}
+						alt=""
+						className="object-cover w-full h-screen opacity-10 "
+					/>
+				</div>
+				<Contact />
 			</section>
 
-			{/* Back to Top Button */}
 			<BackToTop />
 
-			{/* Appointment (probably floating or fixed?) */}
 			<Appointment />
 		</div>
 	);

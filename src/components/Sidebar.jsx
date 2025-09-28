@@ -20,27 +20,11 @@ const Sidebar = ({ menuInfo, setMenuInfo }) => {
 		const name = form.name.value;
 		const userEmail = form.user_email.value;
 
-		// Data object for emailjs
-		const templateParams = {
-			name,
-			user_email: userEmail,
-			message: "New subscriber from website!",
-		};
-
 		try {
-			// --- 1. Send to Admin
+			// --- Only Send confirmation to User now
 			await emailjs.send(
 				"service_03il6aj",
 				"template_4lvz27k",
-				templateParams,
-				"-e_2_nUHKZrkuM6ME"
-			);
-			console.log("Admin notified");
-
-			// --- 2. Send confirmation to User
-			await emailjs.send(
-				"service_03il6aj",
-				"template_r6zpg16",
 				{ name, user_email: userEmail },
 				"-e_2_nUHKZrkuM6ME"
 			);
