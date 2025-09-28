@@ -39,7 +39,7 @@ const About = () => {
 	const [activeTab, setActiveTab] = useState("mission");
 
 	return (
-		<div className="flex flex-col md:flex-row gap-10 md:gap-20 items-start max-w-6xl mx-auto px-4 md:px-6 my-12 md:my-28">
+		<div className="flex flex-col min-h-screen md:flex-row gap-10 md:gap-20 items-start max-w-6xl mx-auto px-4 md:px-6  md:my-28">
 			{/* Image Section with motion */}
 			<motion.div
 				className="relative w-full md:w-[70%]"
