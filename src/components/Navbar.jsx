@@ -69,7 +69,7 @@ const Navbar = () => {
 	return (
 		<>
 			{/* Default Navbar */}
-			<div className="bg-[#171827] drop-shadow-lg">
+			<div className="bg-[#171827] drop-shadow-xl">
 				<NavbarContent
 					onMenuNav={() => setMenuNav(true)}
 					onMenuInfo={() => setMenuInfo(true)}

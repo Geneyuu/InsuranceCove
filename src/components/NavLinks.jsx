@@ -22,7 +22,7 @@ const NavLinks = () => {
 	};
 
 	return (
-		<div className="hidden custom:flex items-center text-white mx-auto border-[1px] border-gray-600 bg-[#2b2d472f] rounded-r-3xl">
+		<div className="hidden custom:flex items-center text-white mx-auto border-[1px] border-gray-600 bg-[#0000032f] rounded-r-3xl">
 			{navLinks.map((link) => (
 				<Link
 					key={link.id}
