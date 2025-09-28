@@ -55,7 +55,7 @@ const NavLinks = () => {
 				smooth={true}
 				offset={-80}
 				duration={500}
-				className={`bg-[#2563EB] px-5 py-3 text-white font-light text-[15px] hover:bg-[#e9bf02] hover:text-black cursor-pointer transition rounded-r-3xl ml-6 ${
+				className={`bg-[#0C4F90] px-5 py-3 text-white font-light text-[15px] hover:bg-[#e9bf02] hover:text-black cursor-pointer transition rounded-r-3xl ml-6 ${
 					active === "GetAQuote"
 						? "ring-2 ring-[#e9bf02] text-black bg-[#e9bf02]"
 						: ""
