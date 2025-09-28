@@ -50,7 +50,7 @@ const Hero = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="relative h-[55vh] md:h-[85vh] bg-[#171827]"
+			className="relative h-[55vh] md:min-h-screen bg-[#171827]"
 		>
 			<div className="absolute inset-0 bg-gradient-to-r from-[#2a2b3d]/100 via-[#1f2235]/70 md:bg-gradient-to-r md:from-[#1f2235]/100 md:via-[#2a2b3d]/95 lg:from-[#171827]/100 lg:via-[#1f2235]/80 z-10 md:max-w-[100%]"></div>
 
