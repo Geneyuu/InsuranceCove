@@ -100,7 +100,7 @@ const getIconByTitle = (title) => {
 
 const Services = () => {
 	return (
-		<div className="max-w-7xl flex flex-col mx-auto px-4 sm:px-6 lg:px-0">
+		<div className="max-w-6xl flex flex-col mx-auto px-4 sm:px-6 lg:px-0">
 			<h2 className="text-[#ffd000] text-center md:text-left font-bold mb-3 text-md sm:text-base ml-1">
 				OUR SERVICES
 			</h2>

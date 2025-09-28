@@ -31,7 +31,7 @@ const NavLinks = () => {
 					smooth={true}
 					offset={
 						link.href === "about"
-							? -90
+							? 0
 							: link.href === "home"
 							? -200
 							: 0

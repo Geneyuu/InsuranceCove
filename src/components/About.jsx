@@ -39,7 +39,7 @@ const About = () => {
 	const [activeTab, setActiveTab] = useState("mission");
 
 	return (
-		<div className="flex flex-col min-h-screen md:flex-row gap-10 md:gap-20 items-start max-w-6xl mx-auto px-4 md:px-6  md:my-28">
+		<div className="flex flex-col md:items-center min-h-screen md:flex-row gap-10 md:gap-10 items-start max-w-6xl mx-auto px-4 md:px-6 ">
 			{/* Image Section with motion */}
 			<motion.div
 				className="relative w-full md:w-[70%]"
@@ -61,7 +61,7 @@ const About = () => {
 				<img
 					src={aboutImage2}
 					alt="Overlay"
-					className="absolute -bottom-32 lg:-left-24 rounded-2xl hidden xl:flex"
+					className="absolute -bottom-24 lg:-left-24 rounded-2xl hidden xl:flex"
 				/>
 			</motion.div>
 
