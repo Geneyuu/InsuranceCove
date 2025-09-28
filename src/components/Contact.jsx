@@ -33,7 +33,7 @@ const Contact = () => {
 	return (
 		<div className="flex flex-col items-center md:flex-row z-50">
 			{/* Image Section */}
-			<div className="relative  hidden md:flex md:h-screen w-full md:w-1/2">
+			<div className="relative hidden md:flex md:h-screen w-full md:w-1/2">
 				<img
 					src={contactImage}
 					alt=""
@@ -77,7 +77,7 @@ const Contact = () => {
 						<select
 							name="insurance_type"
 							required
-							className="appearance-none cursor-pointer bg-blue-800 border border-blue-700 rounded-md w-[60%] md:w-1/2 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+							className="appearance-none cursor-pointer bg-[#171827] border border-blue-700 rounded-md w-[60%] md:w-1/2 px-4 py-3 text-white font-extrabold focus:outline-none focus:ring-2 focus:ring-blue-400"
 						>
 							<option value="">Select Insurance Type</option>
 							<option value="Auto Insurance">

@@ -35,13 +35,13 @@ const App = () => {
 
 			<Navbar />
 
-			<section id="home">
+			<section className="min-h-screen" id="home">
 				<Hero />
 			</section>
 
 			<section
 				id="about"
-				className="relative h-screen flex justify-center items-center bg-[#171827] z-0 my-20 md:my-0"
+				className="relative min-h-screen flex justify-center items-center bg-[#171827] z-0 my-20 md:my-0"
 			>
 				<motion.img
 					src={aboutImageOverlay}

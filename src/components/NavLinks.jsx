@@ -22,7 +22,7 @@ const NavLinks = () => {
 	};
 
 	return (
-		<div className="hidden custom:flex items-center text-white mx-auto border-[1px] border-gray-600 bg-[#2b2d472f] rounded-3xl">
+		<div className="hidden custom:flex items-center text-white mx-auto border-[1px] border-gray-600 bg-[#2b2d472f] rounded-r-3xl">
 			{navLinks.map((link) => (
 				<Link
 					key={link.id}
@@ -38,10 +38,10 @@ const NavLinks = () => {
 					}
 					duration={0}
 					delay={0}
-					className={`relative capitalize text-lg ml-5 font-medium px-3 cursor-pointer transition-all ${
+					className={`relative capitalize text-md ml-5 font-medium px-3 cursor-pointer transition-all ${
 						active === link.href
 							? "text-[#e9bf02] font-extrabold underline underline-offset-[18px]"
-							: "text-gray-300 hover:text-[#e9bf02] hover:underline hover:underline-offset-[18px]"
+							: "text-gray-400 hover:text-[#e9bf02] hover:underline hover:underline-offset-[18px]"
 					}`}
 					onSetActive={handleSetActive}
 				>
